@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import SwiftUICoordinator
+import FirebaseCore
 
 @main
 struct FirebaseChatApp: App {
+    init() {
+        // Initialize Firebase when the app starts
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorStack(MainCoordinatorViews.main)
+                .preferredColorScheme(.light)
         }
     }
 }
+
