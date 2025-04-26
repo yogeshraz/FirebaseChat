@@ -31,7 +31,7 @@ struct ChatListView: View {
                     let lastMessage = viewModel.lastMessages[roomId]
                     
                     Button {
-                        coordinator.push(page: .chatDetail(userId: user.userId, userName: user.username))
+                        coordinator.push(.chatDetail(userId: user.userId, userName: user.username))
                     } label: {
                         HStack {
                             ZStack {
@@ -70,7 +70,7 @@ struct ChatListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Logout") {
                     authViewModel.logout()
-                    coordinator.setRoot(page: .login)
+                    coordinator.setRoot(.login)
                 }
                 .foregroundColor(.red)
             }

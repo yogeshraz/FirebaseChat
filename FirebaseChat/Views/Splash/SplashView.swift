@@ -27,9 +27,9 @@ struct SplashView: View {
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if FirebaseAuthService.shared.currentUser != nil {
-                    coordinator.push(page: .chat)
+                    coordinator.setRoot(.chat)
                 } else {
-                    coordinator.push(page: .login)
+                    coordinator.setRoot(.login)
                 }
             }
         }

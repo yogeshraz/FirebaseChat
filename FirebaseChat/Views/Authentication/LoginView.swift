@@ -68,7 +68,7 @@ struct LoginView: View {
         }
         .onChange(of: viewModel.user) { oldValue, newValue in
             if newValue != nil {
-                coordinator.push(page: .chat)
+                coordinator.setRoot(.chat)
             }
         }
     }
@@ -109,7 +109,7 @@ private extension LoginView {
                 .font(.footnote)
             
             Button("Create Account") {
-                coordinator.push(page: .signup)
+                coordinator.push(.signup)
             }
             .font(.footnote)
             .fontWeight(.semibold)
