@@ -20,7 +20,7 @@ A real-time one-to-one chat application built with **SwiftUI** and **Firebase**,
 
 - 🔗 **Custom SwiftUI Coordinator Self Developed**  
   Built-in modular router system for scalable and reusable navigation.  
-  [Coordinator Library ➡️](https://lnkd.in/gq7F2Cwe)
+  [Coordinator Library ➡️](https://github.com/yogeshraz/SwiftUICoordinator)
 
 - 🌟 **Modern SwiftUI UI/UX**  
   Smooth transitions, adaptive layout, and polished animations.
